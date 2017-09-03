@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Funny_Painting</title>
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>	
+        <header>
+            <img class="title" src="title.png">  <!--  Input the header title image  -->
+            <ul>
+                <li><input class="hbtn" type="submit" value="Customized" onclick="mode(hbtn1)" id="hbtn1"></li>  <!--  Create the first mode button  -->
+                <li><input class="hbtn" type="submit" value="Random" onclick="mode(hbtn2)" id="hbtn2"></li>  <!--  Create the Second mode button  -->
+            </ul>
+        </header>
+        
+    <div class="inputbox" id="mode1">  <!--  Create a customized input box  -->
+        <h1>Choose a Pattern</h1>  <!-- Title -->
+            <ul>  <!--  Make three images as buttons  -->
+                <li id="ibtn1" class="ibtn1" onclick="img(ibtn1)"></li>
+                <li id="ibtn2" class="ibtn2" onclick="img(ibtn2)"></li>
+                <li id="ibtn3" class="ibtn3" onclick="img(ibtn3)"></li>
+            </ul>
+        
+        <div id="ibox1" class="ibox1">  <!--  the first input box  -->
+            Input the X Coordinate (1-300):
+            <input type="text" id="x" class="textbox"><br><br><!-- Input X -->
+            Input the Y Coordinate (1-600):
+            <input type="text" id="y" class="textbox"><br><br><!-- Input Y -->
+            <div id="ibox4">  <!--  the color input  -->
+                Choose a Color:
+                <input type="color" id="c" class="textbox"><br><br><!-- choose color -->
+            </div>
+            <div id="ibox2">  <!--  the length color input  -->
+                Input the Length (1-600):
+                <input type="text" id="r" class="textbox"><br><br><!-- Input radius -->
+            </div>
+            <div id="ibox3">  <!--  the sides input  -->
+                Input the Sides (Greater than 2):
+                <input type="number" id="s" min="3" class="textbox"><br><br><!-- Input radius -->
+            </div>
+            <input type="submit" value="Draw" onclick="drawit(ibtn1)" class="btn" id="sbtn1"><!-- submit and call drawit() -->
+            <input type="submit" value="Draw" onclick="drawit(ibtn2)" class="btn" id="sbtn2"><!-- submit and call drawit() -->
+            <input type="submit" value="Draw" onclick="drawit(ibtn3)" class="btn" id="sbtn3"><!-- submit and call drawit() -->
+        </div>
+    </div>
+        
+    <div class="inputbox" id="mode2">  <!--  create a random input box  -->
+    <h1>Draw it Randomly</h1>  <!-- Title -->
+    <input type="submit" value="Draw" onclick="randomDraw()" class="btn"><!-- submit and call tellme() -->
+    </div>
+        
+    <canvas id="myCanvas" width="500px" height="700px">  <!--  Create the canvas  -->
+    </canvas>
+    
+        <footer>  <!--  Create the footer to change the background colors  -->
+            <img class="title" src="title1.png">
+            <ul>
+                <li><input type="submit" name="url(bcg1.jpg)" value="" onclick="bcgcolor(color0)" id="color0"></li>
+                <li><input type="submit" name="#fff" value="" onclick="bcgcolor(color1)" id="color1"></li>
+                <li><input type="submit" name="#ffba00" value="" onclick="bcgcolor(color2)" id="color2"></li>
+                <li><input type="submit" name="#f00" value="" onclick="bcgcolor(color3)" id="color3"></li>
+                <li><input type="submit" name="#0f0" value="" onclick="bcgcolor(color4)" id="color4"></li>
+                <li><input type="submit" name="#00f" value="" onclick="bcgcolor(color5)" id="color5"></li>
+                <li><input type="submit" name="#ff0" value="" onclick="bcgcolor(color6)" id="color6"></li>
+                <li><input type="submit" name="#f0f" value="" onclick="bcgcolor(color7)" id="color7"></li>
+            </ul>
+        </footer>
+        
+    </body>
+<script src="http://digitalmedia.neu.edu/dgm6308f15alisiyevichm/week2/shape.js"></script>
+<script src="http://digitalmedia.neu.edu/dgm6308f15kannanadityana/week2/shape.js"></script>
+<script src="http://digitalmedia.neu.edu/dgm6308f15zhaoy/week2/shape.js"></script>
+<script src="drawing.js"></script>
+</html>

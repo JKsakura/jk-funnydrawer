@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Mickey Mouse Factory</title>
+<style>
+    body {
+    background-image:url(bcg1.jpg);
+}
+.inputbox {
+    position:absolute; 
+    margin-left:50px;
+    font-size: 1.1em;
+}
+.btn {
+    margin-left: 40px;
+    width: 30%;
+    height: 30px;
+    float: left;
+	text-align: center;
+	text-shadow: 0 1px 0px rgb(10, 7, 0);
+	font-family: 'AmbleRegular';
+	display: block;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 0.5s;
+    color:#fff;
+    background-color: #212121;
+    border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+    font-size: 1.0em;
+}
+    
+.btn:active {
+    display: block;
+}
+    
+.btn:hover {
+    background-color: red;
+}
+    
+.textbox {
+	-webkit-border-radius: 4px;
+	-moz-border-radius:4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+    border: solid 1px #000;
+}
+
+.mic {
+    color:red;
+    float:left;
+}
+.fac {
+    color:#000;
+}
+</style>
+</head>
+<body>
+    <div class="inputbox">  <!--  create a div  -->
+    <h1><div class="mic">Mickey Mouse </div><div class="fac">&nbsp;Factory</div></h1>  <!-- Title -->
+    Input the X Coordinate (1-1000):
+    <input type="text" id="x" class="textbox"><br><br><!-- Input X -->
+    Input the Y Coordinate (1-500):
+    <input type="text" id="y" class="textbox"><br><br><!-- Input Y -->
+    Input the Size (1-100):
+    <input type="text" id="r" class="textbox"><br><br><!-- Input radius -->
+    Choose a Color:
+    <input type="color" id="c" class="textbox"><br><br><!-- choose color -->
+    <input type="submit" value="Draw " onclick="tellme()" class="btn"><!-- submit and call tellme() -->
+    <input type="submit" value="Random" onclick="giveme()" class="btn"><!-- call giveme() -->
+    </div>
+    <canvas id="myCanvas"><!-- create Canvas -->
+    </canvas>
+</body>
+    <script>
+        //set the Canvas' size
+        canvas = document.getElementById("myCanvas");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    </script>
+    <script src="testshape.js"></script>
+    <script src="shape.js"></script>
+</html>
